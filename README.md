@@ -21,12 +21,12 @@ y_test = to_categorical(y_test)
 ```
 I used a sequential model with batch normalization, as it reduces the amount by what the hidden values shift around (reduces overfitting and has slight regularization effect) and added the layers as follows: 
 
-**Conv2D** - A 2D Convolutional layer with 128 filters, 4x4 kernel, Relu activation function to speed up the training process
-**MaxPooling** - A 2x2 maximum pooling layer to reduce computational cost and create a summarized version of the features, small changes in the input image won't modify the pooled output too much ([Source](https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/))
+**Conv2D** - A 2D Convolutional layer with 128 filters, 4x4 kernel, Relu activation function to speed up the training process  
+**MaxPooling** - A 2x2 maximum pooling layer to reduce computational cost and create a summarized version of the features, small changes in the input image won't modify the pooled output too much ([Source](https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/))  
 **Dropout** - A dropout of rate 0.3 - randomly ignoring units with probability of p to reduce overfitting
 
-**Conv2D** - A 2D Convolutional layer with 64 filters, 3x3 kernel, Relu activation function to speed up the training process
-**MaxPooling** - A 2x2 maximum pooling layer
+**Conv2D** - A 2D Convolutional layer with 64 filters, 3x3 kernel, Relu activation function to speed up the training process  
+**MaxPooling** - A 2x2 maximum pooling layer  
 **Dropout** - A dropout of rate 0.3
 
 **Flatten** - A flatten operation performed on the feature map ([More info here](https://www.superdatascience.com/convolutional-neural-networks-cnn-step-3-flattening/))
@@ -56,13 +56,13 @@ I managed to achieve around 92% accuracy and around 23% test loss, tested on 0.2
 
 To run the code, several libraries need to be installed.
 
-Tensorflow - The best way to install it is to follow the official tutorial [here](https://www.tensorflow.org/install/pip)
-Keras - type in the following command
+**Tensorflow** - The best way to install it is to follow the official tutorial [here](https://www.tensorflow.org/install/pip)  
+**Keras** - type in the following command
 ```bash
 pip install keras
 ```
 
-For additional, helpful functions install numpy and matplotlib.
+For additional, helpful functions install **numpy** and **matplotlib**.
 
 ```bash
 pip install numpy
