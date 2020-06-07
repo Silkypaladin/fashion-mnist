@@ -3,7 +3,7 @@
 ## Introduction
 
 FashionMnist is a data set consisting of 70,000 examples of Zalando's article images - pieces of clothing. Each image is associated with one label from 10 classes.
-The goal is to correctly identify each fashion product from given dataset and maximize the accuracy of predictions of the model, using different Machine Learning Algorithms to achieve that.
+The goal is to correctly identify each fashion product from given dataset and maximize the accuracy of predictions of the model, using different machine learning algorithms to achieve that.
 
 ## Methods
 
@@ -19,11 +19,11 @@ Next, I transformed the labels to a binary format.
 y_train = to_categorical(y_train)
 y_test = to_categorical(y_test)
 ```
-I used a sequential model with batch normalization, as it reduces the amount by what the hidden values shift around (reduces overfitting and has slight regularization effect) and added the layers as follows: 
+I used a sequential model with batch normalization, as it reduces the amount, by what the hidden values shift around (reduces overfitting and has slight regularization effect) and added the layers as follows: 
 
 **Conv2D** - A 2D Convolutional layer with 128 filters, 4x4 kernel, Relu activation function to speed up the training process  
 **MaxPooling** - A 2x2 maximum pooling layer to reduce computational cost and create a summarized version of the features, small changes in the input image won't modify the pooled output too much ([Source](https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/))  
-**Dropout** - A dropout of rate 0.3 - randomly ignoring units with probability of p to reduce overfitting
+**Dropout** - A dropout of rate 0.3 - randomly ignoring units to reduce overfitting, the *rate* parameter refers to the fraction of units, whose predictions will be dropped
 
 **Conv2D** - A 2D Convolutional layer with 64 filters, 3x3 kernel, Relu activation function to speed up the training process  
 **MaxPooling** - A 2x2 maximum pooling layer  
@@ -39,7 +39,8 @@ I used *Nadam* optimizer, as it provided slightly better accuracy than *Adam*, b
 The pages given below were a massive help in building my own neural network.  
 [Why use batch normalization](https://towardsdatascience.com/batch-normalization-in-neural-networks-1ac91516821c)  
 [Helpful CNN tutorial](https://medium.com/datadriveninvestor/implementing-convolutional-neural-network-using-tensorflow-for-fashion-mnist-caa99e423371)  
-[Useful step-by-step guide to build a neural network](https://towardsdatascience.com/a-guide-to-an-efficient-way-to-build-neural-network-architectures-part-i-hyper-parameter-8129009f131b)
+[Useful step-by-step guide to build a neural network](https://towardsdatascience.com/a-guide-to-an-efficient-way-to-build-neural-network-architectures-part-i-hyper-parameter-8129009f131b)  
+[Some insight into kernel sizes](https://towardsdatascience.com/deciding-optimal-filter-size-for-cnns-d6f7b56f9363)
 
 
 ## Results
@@ -69,7 +70,7 @@ pip install numpy
 pip install matplotlib
 ```
 
-The dataset is loaded automatically, via tensorflow pipeline. Trained model is saved in */saved_model* directory.
+The dataset is loaded automatically, via tensorflow pipeline. Trained model is saved in */saved_model* directory.  
 To train the model yourself, open a command line in the project directory and type in the following command:
 ```bash
 python recognition.py
