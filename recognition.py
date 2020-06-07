@@ -50,5 +50,6 @@ test_loss, test_acc = model.evaluate(x_test, y_test)
 print('Test loss', test_loss)
 print('Test accuracy', test_acc)
 
-os.makedirs("saved_model")
+if not os.path.exists("./saved_model"):
+    os.makedirs("saved_model")
 model.save("saved_model/model")

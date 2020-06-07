@@ -34,7 +34,7 @@ I used a sequential model with batch normalization, as it reduces the amount, by
 **Dense** - a fully-connected layer with 256 units and Relu activation function  
 **Dense** - a fully-connected layer with 64 units  
 **Dense** - a final, fully connected layer with units equal to 10 (number of classes in the dataset) and softmax activation function (useful in multiclass classification, when the input can be of only one class)  
-I used *Nadam* optimizer, as it provided slightly better accuracy than *Adam*, batch size of 96 and 10 epochs.
+I used *Nadam* optimizer, as it provided slightly better accuracy than *Adam*, batch size of 96 and 10 epochs. I also ran the program with 50 epochs set, the results are presented below.
 
 The pages given below were a massive help in building my own neural network.  
 [Why use batch normalization](https://towardsdatascience.com/batch-normalization-in-neural-networks-1ac91516821c)  
@@ -45,13 +45,14 @@ The pages given below were a massive help in building my own neural network.
 
 ## Results
 
-I managed to achieve around 92% accuracy and around 23% test loss, tested on 0.2 and 0.3 dropout rate. The table below compares some of the results provided in **Benchmark** section [here](https://github.com/zalandoresearch/fashion-mnist) with my result.
+I managed to achieve around 92% accuracy, tested on 0.3 dropout rate. The table below compares some of the results provided in **Benchmark** section [here](https://github.com/zalandoresearch/fashion-mnist) with my result.
 
 | Classifier     | Preprocessing | Fashion test accuracy | Submitter         |
 |----------------|---------------|-----------------------|-------------------|
 | 2 Conv+pooling | None          | 0.876                 | Khasif Rasoul     |
 | 2 Conv+pooling | None          | 0.916                 | Tensorflow's doc  |
-| 2 Conv+pooling | Normalization | 0.925                 | Silkypaladin (Me) |
+| 2 Conv+pooling | Normalization | 0.925(10 epochs)      | Silkypaladin (Me) |
+| 2 Conv+pooling | Normalization | 0.922(50 epochs)      | Silkypaladin (Me) |
 
 ## Usage
 
@@ -78,6 +79,10 @@ python recognition.py
 To use the trained model, run the command below:
 ```bash
 python run_model.py
+```
+If you want to see the results of 50 epochs of training, change *model_10* to *model* in *run_model.py* file.
+```python
+model = keras.models.load_model('saved_model/model_10')
 ```
 
 

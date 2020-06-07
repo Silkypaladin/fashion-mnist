@@ -6,7 +6,7 @@ from keras.utils import to_categorical
 import numpy as np
 import matplotlib.pyplot as plt
 
-model = keras.models.load_model('saved_model/model')
+model = keras.models.load_model('saved_model/model_10')
 
 model.summary()
 
