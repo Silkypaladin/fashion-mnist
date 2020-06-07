@@ -31,9 +31,9 @@ I used a sequential model with batch normalization, as it reduces the amount by 
 
 **Flatten** - A flatten operation performed on the feature map ([More info here](https://www.superdatascience.com/convolutional-neural-networks-cnn-step-3-flattening/))
 
-**Dense** - a fully-connected layer with 256 units and Relu activation function
-**Dense** - a fully-connected layer with 64 units
-**Dense** - a final, fully connected layer with units equal to 10 (number of classes in the dataset) and softmax activation function (useful in multiclass classification, when the input can be of only one class)
+**Dense** - a fully-connected layer with 256 units and Relu activation function  
+**Dense** - a fully-connected layer with 64 units  
+**Dense** - a final, fully connected layer with units equal to 10 (number of classes in the dataset) and softmax activation function (useful in multiclass classification, when the input can be of only one class)  
 I used *Nadam* optimizer, as it provided slightly better accuracy than *Adam*, batch size of 96 and 10 epochs.
 
 The pages given below were a massive help in building my own neural network.  
