@@ -33,12 +33,12 @@ I used a sequential model with batch normalization, as it reduces the amount by 
 
 **Dense** - a fully-connected layer with 256 units and Relu activation function
 **Dense** - a fully-connected layer with 64 units
-**Dense** - a final, fully connected layer with units equal to 10 (number of classes in the dataset) and softmax activation function (useful in multiclass classification) when the input can be of only one class)
+**Dense** - a final, fully connected layer with units equal to 10 (number of classes in the dataset) and softmax activation function (useful in multiclass classification, when the input can be of only one class)
 I used *Nadam* optimizer, as it provided slightly better accuracy than *Adam*, batch size of 96 and 10 epochs.
 
-The pages given below were a massive help in building my own neural network.
-[Why use batch normalization](https://towardsdatascience.com/batch-normalization-in-neural-networks-1ac91516821c)
-[Helpful CNN tutorial](https://medium.com/datadriveninvestor/implementing-convolutional-neural-network-using-tensorflow-for-fashion-mnist-caa99e423371)
+The pages given below were a massive help in building my own neural network.  
+[Why use batch normalization](https://towardsdatascience.com/batch-normalization-in-neural-networks-1ac91516821c)  
+[Helpful CNN tutorial](https://medium.com/datadriveninvestor/implementing-convolutional-neural-network-using-tensorflow-for-fashion-mnist-caa99e423371)  
 [Useful step-by-step guide to build a neural network](https://towardsdatascience.com/a-guide-to-an-efficient-way-to-build-neural-network-architectures-part-i-hyper-parameter-8129009f131b)
 
 
